@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JROTC Quiz</title>
+</head>
+<body>
+
+<h1>JROTC Quiz</h1>
+
+<p>1. What does JROTC stand for?</p>
+<input type="radio" name="q1" value="A"> Junior Reserve Officer Training Corps<br>
+<input type="radio" name="q1" value="B"> Junior Reserve Organization Training Corps<br>
+<input type="radio" name="q1" value="C"> Joint Reserve Officer Training Corps<br>
+
+<p>2. Which color is on the U.S. Flag?</p>
+<input type="radio" name="q2" value="A"> Green<br>
+<input type="radio" name="q2" value="B"> Red<br>
+<input type="radio" name="q2" value="C"> Pink<br>
+
+<p>3. When was the United States Marine Corps founded?</p>
+<input type="radio" name="q3" value="A"> 1775<br>
+<input type="radio" name="q3" value="B"> 1812<br>
+<input type="radio" name="q3" value="C"> 1900<br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Marine_Corps_Emblem.png" alt="Marine Corps Emblem" width="100">
+
+<p>4. What are the official colors of the United States Marine Corps?</p>
+<input type="radio" name="q4" value="A"> Red and Gold<br>
+<input type="radio" name="q4" value="B"> Blue and White<br>
+<input type="radio" name="q4" value="C"> Green and Black<br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Marine_Corps_Emblem.png" alt="Marine Corps Emblem" width="100">
+
+<p>5. Who is known as the "Grand Old Man" of the Marine Corps?</p>
+<input type="radio" name="q5" value="A"> General John A. Lejeune<br>
+<input type="radio" name="q5" value="B"> General William T. Sherman<br>
+<input type="radio" name="q5" value="C"> General James Mattis<br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Marine_Corps_Emblem.png" alt="Marine Corps Emblem" width="100">
+
+<br><br>
+<button onclick="checkAnswers()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function checkAnswers() {
+    var correct = 0;
+    if (document.querySelector('input[name="q1"]:checked')?.value === "A") correct++;
+    if (document.querySelector('input[name="q2"]:checked')?.value === "B") correct++;
+    if (document.querySelector('input[name="q3"]:checked')?.value === "A") correct++;
+    if (document.querySelector('input[name="q4"]:checked')?.value === "A") correct++;
+    if (document.querySelector('input[name="q5"]:checked')?.value === "A") correct++;
+
+    document.getElementById("result").innerText = "You got " + correct + " out of 5 correct!";
+}
+</script>
+
+</body>
+</html>
